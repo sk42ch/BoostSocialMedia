@@ -5,4 +5,6 @@ public interface AddmefastMenu {
     String REVERBNATION_FANS = "Reverbnation Fans";
     String YOUTUBE_LIKES = "YouTube Likes";
     String YOUTUBE_SUBSCRIBE = "YouTube Subscribe";
+    String FB_PAGE_LIKES = "FB Page Likes/Followers";
+    
 }
