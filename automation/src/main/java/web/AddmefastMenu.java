@@ -6,5 +6,5 @@ public interface AddmefastMenu {
     String YOUTUBE_LIKES = "YouTube Likes";
     String YOUTUBE_SUBSCRIBE = "YouTube Subscribe";
     String FB_PAGE_LIKES = "FB Page Likes/Followers";
-    
+    String TWITTER_FOLLOWERS = "Twitter Followers";
 }
