@@ -8,7 +8,7 @@ import web.YoutubeLike;
 import static web.AddmefastMenu.YOUTUBE_LIKES;
 import static web.AddmefastMenu.YOUTUBE_SUBSCRIBE;
 
-public class YT_Channel_101 extends DriverFactory {
+public class YT_Channel_103 extends DriverFactory {
     private static final String STEP_1 = "yt_Subscribers";
     Youtube youtube;
     YoutubeLike youtubeLike;
@@ -16,7 +16,7 @@ public class YT_Channel_101 extends DriverFactory {
     @Test
     public void yt_Subscribers() {
         youtube = new Youtube();
-        youtubeLike = youtube.select_Youtube_Channel_and_Navigate_to_AddmefastPage_("RanaRahman101").clickOn_Amf_Menu(YOUTUBE_SUBSCRIBE);
+        youtubeLike = youtube.select_Youtube_Channel_and_Navigate_to_AddmefastPage_("RanaRahman103").clickOn_Amf_Menu(YOUTUBE_SUBSCRIBE);
         for (int i = 0; i < 30; i++) {
             youtubeLike.Youtube_Subscribe_Flow();
         }
