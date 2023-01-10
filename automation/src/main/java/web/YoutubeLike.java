@@ -14,7 +14,7 @@ public class YoutubeLike extends BasePage {
     By amf_Yt_Like_Button_1 = By.xpath("//div[@class='likedPagesSingle']//div[@class='btn3' and text()='Like']");
     By Yt_Like_Button_2 = By.xpath("(//yt-animated-icon[@animated-icon-type='LIKE'])[1]");
     By amf_Yt_Subscribe_Button_1 = By.xpath("//div[@class='likedPagesSingle']//div[@class='btn3' and text()='Subscribe']");
-    By Yt_Subscribe_Button_2 = By.xpath("//div[@id='subscribe-button']//span[text()='Subscribe']");
+    By Yt_Subscribe_Button_2 = By.xpath("//div[@id='subscribe-button']//span[text()='Subscribe'] | //div[@id='subscribe-button']//yt-formatted-string[text()='Subscribe']");
 
     public YoutubeLike Youtube_Subscribe_Flow() {
         amf_Flow(amf_Yt_Subscribe_Button_1, Yt_Subscribe_Button_2);
