@@ -2,6 +2,7 @@ package web;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NoSuchWindowException;
 import utils.BasePage;
 
@@ -37,15 +38,22 @@ public class YoutubeLike extends BasePage {
             if (!parent.equals(child_window)) {
                 try {
                     getDriver().switchTo().window(child_window);
-                    safeWaitSecond(6);
+                    safeWaitSecond(7);
                     JavascriptExecutor executor = (JavascriptExecutor) getDriver();
-                    executor.executeScript("arguments[0].click();", webAction(button_2));
+                    executor.executeScript("arguments[0].click();", getDriver().findElement(button_2));
                     safeWaitSecond(3);
                 } catch (NoSuchWindowException e) {
                     System.out.println("Now such Window Exception Happen");
+                }catch (NoSuchElementException e){
+                    System.out.println("There is no button on Popup page");
                 }
                 if (!child_window.isEmpty()) {
-                    getDriver().close();
+                    try {
+                        getDriver().close();
+                    }catch (NoSuchWindowException e){
+
+                    }
+
                 }
                 getDriver().switchTo().window(parent);
             }
