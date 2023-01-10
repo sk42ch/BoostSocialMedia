@@ -32,7 +32,7 @@ public class DriverFactory{
     }
 
 
-    @AfterSuite
+   // @AfterSuite
     public static void after() {
         if (driver != null) {
             //driver.manage().deleteAllCookies();
