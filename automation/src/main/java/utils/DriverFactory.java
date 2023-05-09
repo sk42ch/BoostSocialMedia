@@ -24,6 +24,7 @@ public class DriverFactory{
          */
         WebDriverManager.chromedriver().setup();
         ChromeOptions opt = new ChromeOptions();
+        opt.addArguments("--remote-allow-origins=*");
         opt.setExperimentalOption("debuggerAddress", "localhost:9224");
         driver = new ChromeDriver(opt);
         driver.get("https://www.google.com");
