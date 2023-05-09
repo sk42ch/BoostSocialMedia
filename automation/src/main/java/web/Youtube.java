@@ -1,10 +1,9 @@
 package web;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.*;
 import utils.BasePage;
+
+import java.util.List;
 
 import static utils.DriverFactory.getDriver;
 
@@ -23,7 +22,12 @@ public class Youtube extends BasePage {
     }
 
     public YoutubeLike clickOn_Amf_Menu(String menuItem) {
-        getDriver().navigate().to("https://addmefast.com");
+       // String url = "https://addmefast.com";
+      //  getDriver().navigate().to(url);
+        boolean isSpinnerDisplayed = isElementPresent(By.xpath("//div[@id='challenge-spinner']"));
+        if (isSpinnerDisplayed){
+            safeWaitSecond(60);
+        }
         try {
             if (getDriver().getTitle().contains(menuItem)) {
             } else {

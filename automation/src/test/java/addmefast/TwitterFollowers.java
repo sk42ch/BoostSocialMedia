@@ -6,20 +6,21 @@ import web.Youtube;
 import web.YoutubeLike;
 
 import static web.AddmefastMenu.FB_PAGE_LIKES;
+import static web.AddmefastMenu.TWITTER_FOLLOWERS;
 
-public class FacebookLikesFollowers extends DriverFactory {
+public class TwitterFollowers extends DriverFactory {
  Youtube youtube;
    YoutubeLike youtubeLike;
 
     @Test
-    public void fb_Likes_followers() {
+    public void twitter_Likes_followers() {
         /**
          * Facebook Likes Follwers limit is 40 per day, Do not run this class twice a day
          */
         youtube = new Youtube();
-       youtubeLike=  youtube.clickOn_Amf_Menu(FB_PAGE_LIKES);
-        for (int i = 0; i < 40; i++) {
-            youtubeLike.Facebook_Likes_Followers_Flow();
+       youtubeLike=  youtube.clickOn_Amf_Menu(TWITTER_FOLLOWERS);
+        for (int i = 0; i < 80; i++) {
+            youtubeLike.twitter_Followers_Flow();
         }
     }
 }

@@ -5,23 +5,23 @@ import utils.DriverFactory;
 import web.Youtube;
 import web.YoutubeLike;
 
+import static web.AddmefastMenu.INSTAGRAM_FOLLOWERS;
 import static web.AddmefastMenu.TIKTOK_FOLLOWERS;
-import static web.AddmefastMenu.TWITTER_FOLLOWERS;
 
-public class TikTokFollowers extends DriverFactory {
+public class InstaGram_Followers extends DriverFactory {
  Youtube youtube;
    YoutubeLike youtubeLike;
 
     @Test
-    public void tiktok_followers() {
+    public void insta_followers() {
         /**
-         * Facebook Likes Follwers limit is 40 per day, Do not run this class twice a day
+         * Instagram Followers 55 follower per Account per day. No need to change settings
          */
         youtube = new Youtube();
-       youtubeLike=  youtube.clickOn_Amf_Menu(TIKTOK_FOLLOWERS);
-        for (int i = 0; i < 40; i++) {
+       youtubeLike=  youtube.clickOn_Amf_Menu(INSTAGRAM_FOLLOWERS);
+        for (int i = 0; i < 255; i++) {
             System.out.println("TOtal Loopn Run " + i);
-            youtubeLike.tikTok_Follow_Flow();
+            youtubeLike.Instagram_Followers_Flow();
         }
     }
 }

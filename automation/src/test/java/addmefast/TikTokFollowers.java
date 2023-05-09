@@ -5,22 +5,23 @@ import utils.DriverFactory;
 import web.Youtube;
 import web.YoutubeLike;
 
-import static web.AddmefastMenu.FB_PAGE_LIKES;
+import static web.AddmefastMenu.TIKTOK_FOLLOWERS;
 import static web.AddmefastMenu.TWITTER_FOLLOWERS;
 
-public class TwitterFollowers extends DriverFactory {
+public class TikTokFollowers extends DriverFactory {
  Youtube youtube;
    YoutubeLike youtubeLike;
 
     @Test
-    public void twitter_Likes_followers() {
+    public void tiktok_followers() {
         /**
          * Facebook Likes Follwers limit is 40 per day, Do not run this class twice a day
          */
         youtube = new Youtube();
-       youtubeLike=  youtube.clickOn_Amf_Menu(TWITTER_FOLLOWERS);
-        for (int i = 0; i < 80; i++) {
-            youtubeLike.twitter_Followers_Flow();
+       youtubeLike=  youtube.clickOn_Amf_Menu(TIKTOK_FOLLOWERS);
+        for (int i = 0; i < 40; i++) {
+            System.out.println("TOtal Loopn Run " + i);
+            youtubeLike.tikTok_Follow_Flow();
         }
     }
 }

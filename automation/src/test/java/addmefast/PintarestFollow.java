@@ -5,10 +5,10 @@ import utils.DriverFactory;
 import web.Youtube;
 import web.YoutubeLike;
 
-import static web.AddmefastMenu.INSTAGRAM_LIKES;
+import static web.AddmefastMenu.PINTAREST_FOLLOWERS;
 import static web.AddmefastMenu.PINTAREST_SAVE;
 
-public class PintarestSave extends DriverFactory {
+public class PintarestFollow extends DriverFactory {
  Youtube youtube;
    YoutubeLike youtubeLike;
 
@@ -18,10 +18,10 @@ public class PintarestSave extends DriverFactory {
          * Instagram Followers 55 follower per Account per day. No need to change settings
          */
         youtube = new Youtube();
-       youtubeLike=  youtube.clickOn_Amf_Menu(PINTAREST_SAVE);
+       youtubeLike=  youtube.clickOn_Amf_Menu(PINTAREST_FOLLOWERS);
         for (int i = 0; i < 255; i++) {
             System.out.println("TOtal Loopn Run " + i);
-            youtubeLike.pintarest_Save_Flow();
+            youtubeLike.pintarest_Follow_Flow();
         }
         //    @Test(dependsOnMethods = STEP_3, alwaysRun = true)
 //    public void insta_Likes() {

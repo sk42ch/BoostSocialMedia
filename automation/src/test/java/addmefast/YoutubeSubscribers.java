@@ -5,10 +5,10 @@ import utils.DriverFactory;
 import web.Youtube;
 import web.YoutubeLike;
 
-import static web.AddmefastMenu.FB_PAGE_LIKES;
 import static web.AddmefastMenu.YOUTUBE_LIKES;
+import static web.AddmefastMenu.YOUTUBE_SUBSCRIBE;
 
-public class YouTubeLikes extends DriverFactory {
+public class YoutubeSubscribers extends DriverFactory {
  Youtube youtube;
    YoutubeLike youtubeLike;
 
@@ -18,9 +18,9 @@ public class YouTubeLikes extends DriverFactory {
          * Facebook Likes Follwers limit is 40 per day, Do not run this class twice a day
          */
         youtube = new Youtube();
-       youtubeLike=  youtube.clickOn_Amf_Menu(YOUTUBE_LIKES);
+       youtubeLike=  youtube.clickOn_Amf_Menu(YOUTUBE_SUBSCRIBE);
         for (int i = 0; i < 150; i++) {
-            youtubeLike.Youtube_Like_Flow();
+            youtubeLike.Youtube_Subscribe_Flow();
         }
     }
 }
